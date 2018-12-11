@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: euler-cloud-sms
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    healthcheck:
+      enabled: true
+  instance:
+    prefer-ip-address: true
+
+euler:
+  runtime-path: /var/lib/euler-cloud/sms
+
+yunpian:
+  api-key: xxxxxx
+  templates:
+    SMS-000001: "【欧拉框架】您的登录验证码为#code#，有效期#time#分钟"
+    SMS-000002: "【欧拉框架】您的注册验证码为#code#，有效期#time#分钟"
